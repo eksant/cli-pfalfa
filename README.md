@@ -14,44 +14,37 @@ Pfalfa CLI Tool
 [downloads-url]: https://www.npmjs.com/package/cli-pfalfa
 
 <!-- toc -->
-
-- [CLI Pfalfa](#cli-pfalfa)
-- [Usage](#usage)
-- [Commands](#commands)
-  <!-- tocstop -->
+* [CLI Pfalfa](#cli-pfalfa)
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g cli-pfalfa
-# install cli pfalfa in global
-
-$ pfalfa [COMMAND]
-# running command...
-
-$ pfalfa (-v|--version|version)
-# cli-pfalfa/0.1.1 darwin-x64 node-v12.12.0
-
+$ cli-pfalfa COMMAND
+running command...
+$ cli-pfalfa (-v|--version|version)
+cli-pfalfa/0.1.3 darwin-x64 node-v12.12.0
 $ cli-pfalfa --help [COMMAND]
-# USAGE
-    $ pfalfa COMMAND
+USAGE
+  $ cli-pfalfa COMMAND
+...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`cli-pfalfa create`](#cli-pfalfa-create)
-- [`cli-pfalfa deploy`](#cli-pfalfa-deploy)
-- [`cli-pfalfa help [COMMAND]`](#cli-pfalfa-help-command)
-- [`cli-pfalfa list`](#cli-pfalfa-list)
-- [`cli-pfalfa login`](#cli-pfalfa-login)
-- [`cli-pfalfa profile`](#cli-pfalfa-profile)
-- [`cli-pfalfa status`](#cli-pfalfa-status)
+* [`cli-pfalfa create`](#cli-pfalfa-create)
+* [`cli-pfalfa deploy`](#cli-pfalfa-deploy)
+* [`cli-pfalfa help [COMMAND]`](#cli-pfalfa-help-command)
+* [`cli-pfalfa list`](#cli-pfalfa-list)
+* [`cli-pfalfa login`](#cli-pfalfa-login)
+* [`cli-pfalfa profile`](#cli-pfalfa-profile)
+* [`cli-pfalfa status`](#cli-pfalfa-status)
 
 ## `cli-pfalfa create`
 
@@ -68,6 +61,8 @@ OPTIONS
   -n, --name=name                DApps name (required)
 ```
 
+_See code: [src/commands/create.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/create.js)_
+
 ## `cli-pfalfa deploy`
 
 deploy DApp to Pfalfa IPFS Gateway
@@ -80,6 +75,8 @@ OPTIONS
   -f, --file=file  full path of zip file (required)
   -n, --name=name  dApps name (required)
 ```
+
+_See code: [src/commands/deploy.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/deploy.js)_
 
 ## `cli-pfalfa help [COMMAND]`
 
@@ -96,6 +93,8 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
 ## `cli-pfalfa list`
 
 list existing DApps
@@ -104,6 +103,8 @@ list existing DApps
 USAGE
   $ cli-pfalfa list
 ```
+
+_See code: [src/commands/list.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/list.js)_
 
 ## `cli-pfalfa login`
 
@@ -118,6 +119,8 @@ OPTIONS
   -p, --passphare=passphare  developer passphare/password (required)
 ```
 
+_See code: [src/commands/login.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/login.js)_
+
 ## `cli-pfalfa profile`
 
 get Pfalfa Identity Hub Profile
@@ -126,6 +129,8 @@ get Pfalfa Identity Hub Profile
 USAGE
   $ cli-pfalfa profile
 ```
+
+_See code: [src/commands/profile.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/profile.js)_
 
 ## `cli-pfalfa status`
 
@@ -139,4 +144,5 @@ OPTIONS
   -n, --name=name  DApps name (required)
 ```
 
+_See code: [src/commands/status.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.3/src/commands/status.js)_
 <!-- commandsstop -->
