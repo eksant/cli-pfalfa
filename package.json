@@ -1,10 +1,10 @@
 {
   "name": "cli-pfalfa",
   "description": "Command Line Interface Pfalfa",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": "eksant @eksant",
   "bin": {
-    "cli-pfalfa": "./bin/run"
+    "pfalfa": "./bin/run"
   },
   "bugs": "https://github.com/eksant/cli-pfalfa/issues",
   "dependencies": {
@@ -37,7 +37,9 @@
   ],
   "homepage": "https://github.com/eksant/cli-pfalfa",
   "keywords": [
-    "oclif"
+    "cli",
+    "pfalfa",
+    "eksa"
   ],
   "license": "MIT",
   "main": "src/index.js",

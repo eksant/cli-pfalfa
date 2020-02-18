@@ -1,4 +1,3 @@
----
 version: 2
 jobs:
   node-latest: &test
@@ -16,9 +15,9 @@ jobs:
           command: yarn
       - run: ./bin/run --version
       - run: ./bin/run --help
-      - run:
-          name: Testing
-          command: yarn test
+      # - run:
+      #     name: Testing
+      #     command: yarn test
   node-12:
     <<: *test
     docker:
@@ -43,7 +42,7 @@ jobs:
 
 workflows:
   version: 2
-  "cli-pfalfa":
+  'cli-pfalfa':
     jobs:
       - node-latest
       - node-12
