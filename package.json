@@ -1,7 +1,7 @@
 {
   "name": "cli-pfalfa",
   "description": "Command Line Interface Pfalfa",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "eksant @eksant",
   "bin": {
     "pfalfa": "./bin/run"
