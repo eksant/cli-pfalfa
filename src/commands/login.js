@@ -4,8 +4,6 @@ const { Command, flags } = require('@oclif/command')
 const { api, msg, db } = require('../utils')
 
 class LoginCommand extends Command {
-  // static flags = { ...cli.table.flags() }
-
   async run() {
     const { flags } = this.parse(LoginCommand)
     var email = flags.email
@@ -47,7 +45,7 @@ class LoginCommand extends Command {
 
         const val = { email: data.email, pubkey: data.pub }
         db.write(val)
-        
+
         return cli.table([val], {
           email: { minWidth: 25 },
           pubkey: { header: 'Public Key', get: row => row.pubkey },
