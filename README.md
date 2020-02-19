@@ -27,7 +27,7 @@ $ npm install -g cli-pfalfa
 $ cli-pfalfa COMMAND
 running command...
 $ cli-pfalfa (-v|--version|version)
-cli-pfalfa/0.1.4 darwin-x64 node-v12.12.0
+cli-pfalfa/0.1.5 darwin-x64 node-v12.12.0
 $ cli-pfalfa --help [COMMAND]
 USAGE
   $ cli-pfalfa COMMAND
@@ -61,7 +61,7 @@ OPTIONS
   -n, --name=name                DApps name (required)
 ```
 
-_See code: [src/commands/create.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/create.js)_
+_See code: [src/commands/create.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/create.js)_
 
 ## `cli-pfalfa deploy`
 
@@ -76,7 +76,7 @@ OPTIONS
   -n, --name=name  dApps name (required)
 ```
 
-_See code: [src/commands/deploy.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/deploy.js)_
+_See code: [src/commands/deploy.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/deploy.js)_
 
 ## `cli-pfalfa help [COMMAND]`
 
@@ -104,7 +104,7 @@ USAGE
   $ cli-pfalfa list
 ```
 
-_See code: [src/commands/list.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/list.js)_
+_See code: [src/commands/list.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/list.js)_
 
 ## `cli-pfalfa login`
 
@@ -119,7 +119,7 @@ OPTIONS
   -p, --passphare=passphare  developer passphare/password (required)
 ```
 
-_See code: [src/commands/login.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/login.js)_
+_See code: [src/commands/login.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/login.js)_
 
 ## `cli-pfalfa profile`
 
@@ -130,7 +130,7 @@ USAGE
   $ cli-pfalfa profile
 ```
 
-_See code: [src/commands/profile.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/profile.js)_
+_See code: [src/commands/profile.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/profile.js)_
 
 ## `cli-pfalfa status`
 
@@ -144,5 +144,5 @@ OPTIONS
   -n, --name=name  DApps name (required)
 ```
 
-_See code: [src/commands/status.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.4/src/commands/status.js)_
+_See code: [src/commands/status.js](https://github.com/eksant/cli-pfalfa/blob/v0.1.5/src/commands/status.js)_
 <!-- commandsstop -->
