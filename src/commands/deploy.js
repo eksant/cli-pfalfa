@@ -61,46 +61,26 @@ class DeployCommand extends Command {
           api
             .upload(api.host.pfalfa, `ipfs/upload/${item.id}`, file, user.pubkey)
             .then(resp => {
-              // console.log('==resp', resp)
               const { success, message } = resp
               if (!success) return this.log(msg.fail(message))
 
               api
                 .get(api.host.pfalfa, 'dapps', user.pubkey)
                 .then(resp => {
-                  
-
                   const { success, message, data } = resp
                   if (!success) return this.log(msg.fail(message))
                   const items = data.filter(f => f.name === name)
-                  // const item = items.length > 0 ? items[0] : null
-                  if (items.length < 1) return this.log(msg.fail('DApp not found!'))
-
-                  // console.log('==items', items)
+                  if (items.length < 1) return this.log(msg.fail(`DApp ${name} not found`))
 
                   return cli.table(items, {
                     name: { header: 'DApp Name' },
                     category: { minWidth: 10 },
-                    logoUrl: { header: 'Logo Url' },
-                    ipPublic: { header: 'IP Public' },
-                    port: { minWidth: 5 },
-                    ipnsUrl: { header: 'DApp Public' },
+                    ipPublic: { header: 'IP Public', get: row => (row.ipPublic ? row.ipPublic : '') },
+                    gunDb: { header: 'Gun DB', get: row => (row.gunDb ? row.gunDb : '') },
+                    ipfsUrl: { header: 'DApp Public', get: row => (row.ipfsUrl ? row.ipfsUrl : '') },
                     dappStatus: { header: 'Status' },
                     dappCreated: { header: 'Created At', get: row => moment(row.dappCreated).format('DD MMM YYYY hh:mm:ss') },
                   })
-
-                  // const table = new Table()
-                  // table.push(
-                  //   { 'DApp Name': item.name },
-                  //   { Category: item.category },
-                  //   { 'Logo Url': item.logoUrl ? item.logoUrl : '' },
-                  //   { 'IP Public': item.ipPublic ? item.ipPublic : '' },
-                  //   { Port: item.port ? item.port : '' },
-                  //   { 'DApp Public': item.ipnsUrl ? item.ipnsUrl : '' },
-                  //   { Status: item.dappStatus },
-                  //   { 'Created At': moment(item.dappCreated).format('DD MMM YYYY hh:mm:ss') }
-                  // )
-                  // return this.log(table.toString())
                 })
                 .finally(() => cli.action.stop())
                 .catch(error => {
@@ -111,7 +91,6 @@ class DeployCommand extends Command {
               return this.log(msg.error(error))
             })
         })
-
         .catch(error => {
           return this.log(msg.error(error))
         })

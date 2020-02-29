@@ -77,9 +77,9 @@ class CreateCommand extends Command {
         return cli.table([data], {
           name: { header: 'DApp Name' },
           category: { minWidth: 10 },
-          logoUrl: { header: 'Logo Url' },
-          ipPublic: { header: 'IP Public' },
-          port: { minWidth: 5 },
+          ipPublic: { header: 'IP Public', get: row => (row.ipPublic ? row.ipPublic : '') },
+          gunDb: { header: 'Gun DB', get: row => (row.gunDb ? row.gunDb : '') },
+          ipfsUrl: { header: 'DApp Public', get: row => (row.ipfsUrl ? row.ipfsUrl : '') },
           dappStatus: { header: 'Status' },
           dappCreated: { header: 'Created At', get: row => moment(row.dappCreated).format('DD MMM YYYY hh:mm:ss') },
         })
