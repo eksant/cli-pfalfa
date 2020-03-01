@@ -1,7 +1,7 @@
 {
-  "name": "cli-pfalfa",
+  "name": "pfalfa",
   "description": "Command Line Interface Pfalfa",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "eksant <eksant@gmail.com>",
   "bin": {
     "pfalfa": "./bin/run"
@@ -47,7 +47,7 @@
   "main": "src/index.js",
   "oclif": {
     "commands": "./src/commands",
-    "bin": "cli-pfalfa",
+    "bin": "pfalfa",
     "plugins": [
       "@oclif/plugin-help"
     ]

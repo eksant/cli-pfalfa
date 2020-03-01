@@ -74,12 +74,12 @@ class DeployCommand extends Command {
 
                   return cli.table(items, {
                     name: { header: 'DApp Name' },
-                    category: { minWidth: 10 },
+                    // category: { minWidth: 10 },
                     ipPublic: { header: 'IP Public', get: row => (row.ipPublic ? row.ipPublic : '') },
                     gunDb: { header: 'Gun DB', get: row => (row.gunDb ? row.gunDb : '') },
                     ipfsUrl: { header: 'DApp Public', get: row => (row.ipfsUrl ? row.ipfsUrl : '') },
                     dappStatus: { header: 'Status' },
-                    dappCreated: { header: 'Created At', get: row => moment(row.dappCreated).format('DD MMM YYYY hh:mm:ss') },
+                    // dappCreated: { header: 'Created At', get: row => moment(row.dappCreated).format('DD MMM YYYY hh:mm:ss') },
                   })
                 })
                 .finally(() => cli.action.stop())
